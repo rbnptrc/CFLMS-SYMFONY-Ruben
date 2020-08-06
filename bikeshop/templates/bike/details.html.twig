@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+  <hr>
+       <h2>{{bikes.brand}}</h2>
+        <img src="{{bikes.image}}" class="card-img-top" alt="">
+       <ul class="list-group">
+               <li class="list-group-item">Model: {{bikes.model}}</li>
+               <li class="list-group-item">Color: {{bikes.color}}</li>
+               <li class="list-group-item">Availability: {{bikes.availability}}</li>
+               <li class="list-group-item">Rent Date: <strong> {{bikes.startDate|date('F j, Y, g:i a')}} </strong> </li>
+               <li class="list-group-item">Return Date: <strong> {{bikes.returnDate|date('F j, Y, g:i a')}} </strong> </li>
+       </ul>
+       <br>
+       <a class="btn btn-info" href="/index">Back to bikess</a>
+{% endblock %}
